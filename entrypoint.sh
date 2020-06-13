@@ -2,5 +2,8 @@
 
 set -e
 
+cd $1
 
-sh -c "$*"
+echo $PWD
+
+sh -c "$2"

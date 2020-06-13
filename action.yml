@@ -1,6 +1,17 @@
 name: 'cdk-python'
 author: 'Kiran Devarakonda>'
 description: 'GitHub Action for AWS CDK'
+inputs:
+  workdir:
+    description: set the working directory
+    required: true
+    default: '_infrastructure'
+  command:
+    description: what is the command to run
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  args:
+    - ${{inputs.workdir}}
+    - ${inputs.command}}
