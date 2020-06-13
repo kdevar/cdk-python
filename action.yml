@@ -1,0 +1,6 @@
+name: 'cdk-python'
+author: 'Kiran Devarakonda>'
+description: 'GitHub Action for AWS CDK'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
